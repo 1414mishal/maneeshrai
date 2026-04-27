@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Maneesh Rai | Cardiac Electrophysiologist · Mangalore</title>
+<meta name="description" content="Dr. Maneesh Rai — Cardiac Electrophysiologist in Mangalore. MD, DM (Cardiology), Fellowship in Cardiac Electrophysiology. Expert in pacemaker implantation, CRT, EP studies, RF ablation and arrhythmia management.">
+<meta property="og:title" content="Dr. Maneesh Rai | Cardiac Electrophysiologist · Mangalore">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:     #111018;
+  --dark2:    #1C1A2A;
+  --burg:     #7B1A1A;
+  --burg2:    #9F2B2B;
+  --gold:     #B8892A;
+  --gold2:    #D4A843;
+  --gold-bg:  #FBF5E6;
+  --ivory:    #FDFCF9;
+  --cream:    #F6F0E6;
+  --stone:    #EDE3D3;
+  --text:     #16110A;
+  --muted:    #7A6B54;
+  --border:   #DDD4C2;
+  --white:    #FFFFFF;
+  --green:    #16A34A;
+  --ease:     all 0.3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--ivory);color:var(--text);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── PRELOADER ── */
+.preloader{position:fixed;inset:0;background:var(--dark);z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .7s ease,visibility .7s ease}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-inner{text-align:center;padding:30px}
+.ecg-wrap{width:240px;height:80px;margin:0 auto;position:relative}
+.ecg-wrap svg{width:100%;height:100%;display:block}
+.ecg-line{stroke:var(--gold2);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:400;stroke-dashoffset:400;animation:ecgDraw 1.8s cubic-bezier(.5,0,.4,1) infinite;filter:drop-shadow(0 0 6px rgba(212,168,67,.55))}
+.ecg-base{stroke:rgba(255,255,255,.06);stroke-width:1;fill:none}
+@keyframes ecgDraw{0%{stroke-dashoffset:400}55%{stroke-dashoffset:0}100%{stroke-dashoffset:-400}}
+.preloader-mark{width:54px;height:54px;border-radius:50%;background:var(--burg);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 22px;animation:pulse 1.4s ease-in-out infinite;box-shadow:0 0 0 0 rgba(123,26,26,.6)}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(123,26,26,.5)}50%{transform:scale(1.08);box-shadow:0 0 0 14px rgba(123,26,26,0)}}
+.preloader-name{font-family:'Cormorant Garamond',serif;color:#fff;font-size:24px;letter-spacing:.04em;margin-top:24px;font-weight:400}
+.preloader-sub{font-family:'Inter',sans-serif;color:var(--gold2);font-size:10px;letter-spacing:.32em;text-transform:uppercase;margin-top:6px;font-weight:600}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.active{opacity:1;transform:none}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 6%;display:flex;align-items:center;justify-content:space-between;transition:var(--ease);background:linear-gradient(to bottom,rgba(17,16,24,.78),rgba(17,16,24,0))}
+nav.scrolled{background:rgba(253,252,249,.97);backdrop-filter:blur(14px);padding:14px 6%;box-shadow:0 1px 0 var(--border)}
+.nav-logo{display:flex;align-items:center;gap:13px;text-decoration:none}
+.nav-mark{width:40px;height:40px;border-radius:50%;background:var(--burg);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;line-height:1.1;transition:color .3s}
+nav.scrolled .nav-name{color:var(--dark)}
+.nav-name em{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);transition:color .3s}
+nav.scrolled .nav-name em{color:var(--gold)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.92);text-decoration:none;transition:color .25s}
+nav.scrolled .nav-links a{color:var(--text)}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{background:var(--burg)!important;color:#fff!important;padding:9px 20px;border-radius:3px}
+nav.scrolled .nav-cta{background:var(--burg)!important;color:#fff!important}
+.nav-cta:hover{background:var(--burg2)!important}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff;transition:background .3s;display:block}
+nav.scrolled .menu-toggle span{background:var(--dark)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 6% 80px;background:linear-gradient(135deg,#0C0B12 0%,#181623 60%,#221E33 100%);position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:-160px;right:-120px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(184,137,42,.12),transparent 65%);pointer-events:none}
+.hero-glow2{position:absolute;bottom:-160px;left:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(123,26,26,.18),transparent 65%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,#000 30%,transparent 100%)}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;width:100%;position:relative;z-index:2;max-width:1200px;margin:0 auto}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6vw,82px);color:#fff;line-height:1.04;margin-bottom:10px;font-weight:400}
+.hero-h1 .hl{color:var(--gold2);font-style:italic;display:block;margin-top:6px;font-size:clamp(24px,3.2vw,42px)}
+.hero-creds{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.hero-creds span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.78);font-size:11px;font-weight:600;padding:5px 12px;border-radius:2px;letter-spacing:.04em}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.6);max-width:500px;margin-bottom:36px;font-weight:300;line-height:1.72}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{background:var(--burg);color:#fff;padding:15px 32px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:var(--ease);display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--burg2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(123,26,26,.4)}
+.btn-outline-white{background:transparent;color:rgba(255,255,255,.85);padding:14px 32px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,.28);transition:var(--ease);display:inline-block}
+.btn-outline-white:hover{border-color:var(--gold2);color:var(--gold2)}
+
+/* ── HEART ANIMATION ── */
+.hero-photo{position:relative}
+.hero-photo-frame{border-radius:4px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(184,137,42,.25);height:500px;background:#0C0B12;display:flex;align-items:center;justify-content:center}
+.heart-container {width: 320px; height: 320px; position: relative;}
+.heart-svg {width: 100%; height: 100%; fill: var(--burg); filter: drop-shadow(0 0 20px rgba(123, 26, 26, 0.6)); animation: heartbeat 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);}
+.heart-ecg-overlay {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 140%; stroke: var(--gold2); stroke-width: 3; fill: none; stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: ecgStroke 2.4s infinite linear; opacity: 0.8;}
+@keyframes heartbeat {
+  0% { transform: scale(0.95); }
+  5% { transform: scale(1.1); }
+  10% { transform: scale(0.95); }
+  15% { transform: scale(1.2); }
+  50% { transform: scale(1); }
+  100% { transform: scale(0.95); }
+}
+@keyframes ecgStroke {
+  to { stroke-dashoffset: 0; }
+}
+
+.hero-photo-deco{position:absolute;top:-16px;right:-16px;bottom:16px;left:16px;border:2px solid var(--gold);border-radius:4px;z-index:-1}
+.hero-tag{position:absolute;bottom:-18px;left:-18px;background:var(--burg);color:#fff;padding:18px 22px;border-radius:3px;border-left:3px solid var(--gold)}
+.hero-tag .ht{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:500}
+.hero-tag .hs{font-family:'Inter',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;opacity:.7;margin-top:3px}
+
+/* ── FACT STRIP ── */
+.fact-strip{background:var(--dark2);padding:28px 6%;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--burg)}
+.fact-item{padding:0 28px;display:flex;align-items:center;gap:14px;border-right:1px solid rgba(255,255,255,.07)}
+.fact-item:first-child{padding-left:0}
+.fact-item:last-child{border-right:none}
+.fact-icon{width:38px;height:38px;background:rgba(184,137,42,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fact-icon i{color:var(--gold);font-size:15px}
+.fact-item strong{display:block;color:#fff;font-size:13px;font-weight:600;margin-bottom:2px}
+.fact-item span{color:rgba(255,255,255,.42);font-size:11px}
+
+/* ── SHARED ── */
+.sec-label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.sec-label::before{content:'';width:24px;height:1px;background:var(--gold);display:inline-block;flex-shrink:0}
+.sec-h{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);color:var(--dark);margin-bottom:16px;line-height:1.18;font-weight:400}
+.sec-sub{font-size:14px;color:var(--muted);max-width:560px;line-height:1.78}
+
+/* ── DOCTOR ── */
+.doctor{padding:100px 6%;background:var(--cream)}
+.doctor-inner{display:grid;grid-template-columns:400px 1fr;gap:70px;align-items:center;max-width:1200px;margin:0 auto}
+.doc-photo{position:relative}
+.doc-photo img{width:100%;border-radius:4px;height:500px;object-fit:cover;object-position:top;display:block;box-shadow:0 20px 50px rgba(0,0,0,.12)}
+.doc-photo::before{content:'';position:absolute;top:-14px;left:-14px;right:14px;bottom:14px;border:2px solid var(--gold);border-radius:4px;z-index:-1}
+.doctor-info .sec-label{color:var(--gold)}
+.doctor-info h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,46px);color:var(--dark);margin-bottom:6px;line-height:1.15;font-weight:400}
+.doc-quals{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--burg);margin-bottom:24px}
+.doctor-info p{font-size:14px;color:var(--muted);line-height:1.82;margin-bottom:14px}
+.doc-quote{border-left:3px solid var(--gold);padding:14px 20px;margin:22px 0;font-style:italic;color:var(--muted);font-size:15px;font-family:'Cormorant Garamond',serif;line-height:1.7;background:var(--white)}
+.doc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn-dark{background:var(--dark);color:#fff;padding:13px 26px;border-radius:3px;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:var(--ease);display:inline-flex;align-items:center;gap:8px}
+.btn-dark:hover{background:var(--burg)}
+.btn-outline-dark{background:transparent;color:var(--dark);border:1px solid var(--dark);padding:13px 26px;border-radius:3px;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:var(--ease);display:inline-flex;align-items:center;gap:8px}
+.btn-outline-dark:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── ABOUT ── */
+.about{padding:100px 6%;background:var(--ivory)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.about-img{position:relative}
+.about-img img{width:100%;height:480px;object-fit:cover;border-radius:4px;display:block;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.about-gold-bar{position:absolute;top:24px;left:-14px;width:3px;height:72px;background:var(--gold)}
+.about-tag{position:absolute;bottom:20px;right:-22px;background:var(--dark);color:#fff;padding:18px 22px;border-radius:3px}
+.about-tag .at{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400}
+.about-tag .as{font-size:9px;text-transform:uppercase;letter-spacing:.14em;opacity:.5;margin-top:3px}
+.about-text p{font-size:14px;color:var(--muted);line-height:1.84;margin-bottom:16px}
+.about-feats{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:30px}
+.about-feat{padding:18px;border-radius:3px;background:var(--white);border:1px solid var(--border);display:flex;gap:12px;align-items:flex-start;transition:var(--ease)}
+.about-feat:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,137,42,.1)}
+.about-feat i{color:var(--gold);font-size:16px;margin-top:2px;flex-shrink:0}
+.about-feat h5{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:3px;text-transform:uppercase;letter-spacing:.05em}
+.about-feat p{font-size:11px;color:var(--muted);margin:0}
+
+/* ── SPECIALITIES ── */
+.specialities{padding:100px 6%;background:var(--ivory)}
+.specialities .sec-inner{max-width:1200px;margin:0 auto}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:50px;border:1px solid var(--border)}
+.svc-card{padding:36px 28px;background:var(--white);transition:var(--ease);position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--burg);transform:scaleX(0);transition:transform .35s ease;transform-origin:left}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card:hover{background:var(--cream)}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:54px;font-weight:400;color:var(--stone);line-height:1;margin-bottom:12px;display:block;transition:color .3s}
+.svc-card:hover .svc-num{color:rgba(184,137,42,.3)}
+.svc-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--dark);margin-bottom:12px;font-weight:500}
+.svc-card p{font-size:13px;color:var(--muted);line-height:1.76}
+
+/* ── PACEMAKERS ── */
+.pacemakers{padding:100px 6%;background:var(--dark)}
+.pacemakers .sec-inner{max-width:1200px;margin:0 auto}
+.pacemakers .sec-label{color:var(--gold)}
+.pacemakers .sec-label::before{background:var(--gold)}
+.pacemakers .sec-h{color:#fff}
+.pacemakers .sec-sub{color:rgba(255,255,255,.45)}
+.pace-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}
+.pace-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:3px;padding:36px 28px;border-top:3px solid var(--burg);transition:var(--ease);position:relative}
+.pace-card:hover{background:rgba(255,255,255,.07);border-top-color:var(--gold)}
+.pace-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:rgba(255,255,255,.05);font-weight:400;position:absolute;top:20px;right:22px;line-height:1}
+.pace-card h4{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:14px;margin-top:22px;font-weight:400}
+.pace-card p{font-size:13px;color:rgba(255,255,255,.52);line-height:1.78}
+
+/* ── BLOGS ── */
+.blogs{padding:100px 6%;background:var(--cream)}
+.blogs .sec-inner{max-width:1200px;margin:0 auto}
+.blog-cards{display:flex;flex-wrap:wrap;gap:28px;justify-content:center;margin-top:50px}
+.blog-card{flex:1 1 300px;max-width:500px;border-radius:3px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:var(--ease);background:var(--white);border:1px solid var(--border)}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.1);border-color:var(--gold)}
+.blog-card-img{height:220px;overflow:hidden;position:relative}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.blog-card:hover .blog-card-img img{transform:scale(1.04)}
+.blog-pill{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:2px;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#fff}
+.blog-card-body{padding:28px}
+.blog-card-body h3{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--dark);margin-bottom:10px;line-height:1.3;font-weight:400}
+.blog-card-body p{font-size:13px;color:var(--muted);line-height:1.68;margin-bottom:16px}
+.read-more{font-size:11px;font-weight:700;color:var(--burg);text-transform:uppercase;letter-spacing:.12em;display:inline-flex;align-items:center;gap:6px}
+
+/* ── TESTIMONIALS ── */
+.testimonials{padding:100px 6%;background:var(--ivory)}
+.testimonials .sec-inner{max-width:1200px;margin:0 auto}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px}
+.testi-card{background:var(--white);padding:36px;border-radius:3px;border:1px solid var(--border);position:relative;transition:var(--ease)}
+.testi-card::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:90px;color:var(--gold);position:absolute;top:-14px;left:28px;line-height:1;opacity:.5}
+.testi-card:hover{border-color:var(--gold);box-shadow:0 8px 32px rgba(184,137,42,.08)}
+.testi-stars{color:var(--gold);font-size:13px;letter-spacing:3px;margin-bottom:18px}
+.testi-card blockquote{font-size:14px;color:#3D3226;line-height:1.84;margin-bottom:22px;font-style:italic;padding-top:12px}
+.testi-name{font-size:13px;font-weight:700;color:var(--dark)}
+.testi-label{font-size:11px;color:var(--burg);margin-top:3px;font-weight:600;letter-spacing:.04em}
+
+/* ── CONTACT ── */
+.contact{padding:100px 6%;background:var(--dark)}
+.contact-grid{grid-template-columns:1fr 1.1fr;gap:70px;max-width:1200px;margin:0 auto}
+.contact-info .sec-label{color:var(--gold)}
+.contact-info .sec-label::before{background:var(--gold)}
+.contact-info h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.5vw,42px);color:#fff;margin-bottom:18px;font-weight:400}
+.contact-info>p{color:rgba(255,255,255,.48);font-size:14px;margin-bottom:32px;line-height:1.72}
+.c-block{margin-bottom:24px}
+.c-label{font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.c-block p{color:rgba(255,255,255,.62);font-size:13px;line-height:1.72;margin:0}
+.c-block a{color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s}
+.c-block a:hover{color:var(--gold)}
+.hours-tbl{width:100%;border-collapse:collapse;margin-top:4px}
+.hours-tbl td{padding:8px 0;font-size:13px;color:rgba(255,255,255,.62);border-bottom:1px solid rgba(255,255,255,.06)}
+.hours-tbl td:first-child{padding-right:18px;white-space:nowrap;font-weight:600;color:rgba(255,255,255,.85)}
+.c-links{display:flex;flex-direction:column;gap:10px;margin-bottom:0}
+.c-links a{color:rgba(255,255,255,.62);text-decoration:none;font-size:13px;transition:color .2s;display:flex;align-items:center;gap:12px}
+.c-links a i{color:var(--gold);width:16px;flex-shrink:0}
+.c-links a:hover{color:var(--gold)}
+/* Booking card */
+.booking-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:0;display:flex;flex-direction:column;overflow:hidden}
+.bk-pane{display:block;padding:40px}
+.bk-pane h3{font-family:'Cormorant Garamond',serif;font-size:30px;color:#fff;margin-bottom:10px;font-weight:400}
+.bk-pane>.bk-desc{color:rgba(255,255,255,.55);font-size:14px;margin-bottom:24px;line-height:1.72}
+.bk-divider{width:36px;height:1px;background:var(--gold);margin-bottom:26px}
+.bc-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.bc-step{display:flex;align-items:flex-start;gap:14px}
+.bc-step-n{width:26px;height:26px;background:var(--burg);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.bc-step-t strong{display:block;color:#fff;font-size:13px;margin-bottom:2px}
+.bc-step-t span{color:rgba(255,255,255,.42);font-size:12px}
+.btn-book{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--burg);color:#fff;padding:16px 32px;border-radius:3px;text-decoration:none;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:var(--ease);width:100%}
+.btn-book:hover{background:var(--burg2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(123,26,26,.45)}
+.bc-alt{margin-top:14px;text-align:center;color:rgba(255,255,255,.32);font-size:12px}
+.bc-alt a{color:rgba(255,255,255,.48);text-decoration:none;transition:color .2s}
+.bc-alt a:hover{color:var(--gold)}
+
+/* ── MAPS ── */
+.maps-row{display:grid;grid-template-columns:repeat(2,1fr)}
+.map-wrap{position:relative}
+.map-wrap iframe{display:block;width:100%;height:380px;border:0}
+.map-lbl{position:absolute;top:14px;left:14px;z-index:1;background:var(--dark);color:#fff;padding:9px(14px);border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border-left:3px solid var(--gold);pointer-events:none;max-width:calc(100% - 28px)}
+
+/* ── FOOTER ── */
+footer{background:#090810;padding:60px 6% 28px;color:rgba(255,255,255,.42)}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:26px;max-width:1200px}
+.f-brand{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;margin-bottom:6px;font-weight:400}
+.f-brand em{display:block;font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+.footer-col h6{color:rgba(255,255,255,.7);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px}
+.footer-col a{display:block;color:inherit;text-decoration:none;font-size:13px;margin-bottom:9px;transition:color .2s}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;font-size:11px;max-width:1200px}
+
+/* ── MOBILE BAR ── */
+.mobile-bar{display:none;position:fixed;bottom:14px;left:4%;right:4%;gap:10px;z-index:900}
+.mobile-bar a{flex:1;text-align:center;padding:13px;border-radius:50px;text-decoration:none;font-size:13px;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.m-call{background:var(--white);color:var(--dark);border:1px solid var(--border)}
+.m-book{background:var(--burg);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .pace-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-photo{display:none}
+  .hero-grid{display:none}
+  .about-inner{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .doctor-inner{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .pace-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--ivory);padding:20px 6%;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+  .nav-links.open{display:flex}
+  .nav-links a{color:var(--text)!important;padding:6px 0}
+  .nav-cta{color:#fff!important;background:var(--burg)!important}
+  .menu-toggle{display:flex}
+  .mobile-bar{display:flex}
+  body{padding-bottom:80px}
+  .about-feats{grid-template-columns:1fr}
+  .fact-strip{grid-template-columns:1fr 1fr;gap:22px;padding:24px 6%}
+  .fact-item{border-right:none;padding:0}
+  .testi-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .maps-row{grid-template-columns:1fr}
+  .hero{padding:120px 6% 70px}
+  .bk-pane{padding:28px}
+}
+@media(max-width:540px){
+  .footer-bottom{flex-direction:column;gap:6px;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ecg-line{animation:none;stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-mark"><i class="fas fa-heartbeat"></i></div>
+    <div class="ecg-wrap">
+      <svg viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+        <line class="ecg-base" x1="0" y1="40" x2="240" y2="40"/>
+        <path class="ecg-line" d="M0,40 L70,40 L80,40 L86,22 L92,58 L98,8 L104,68 L110,40 L150,40 L158,40 L164,28 L170,52 L176,40 L240,40"/>
+      </svg>
+    </div>
+    <div class="preloader-name">Dr. Maneesh Rai</div>
+    <div class="preloader-sub">Cardiac Electrophysiologist</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-mark"><i class="fas fa-heartbeat"></i></div>
+    <span class="nav-name">Dr. Maneesh Rai<em>Cardiac Electrophysiologist · Mangalore</em></span>
+  </a>
+  <button class="menu-toggle" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="navLinks">
+    <a href="#doctors">Specialist</a>
+    <a href="#about">About</a>
+    <a href="#specialities">Services</a>
+    <a href="#blogs">Blogs</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <h1 class="hero-h1">Dr. Maneesh Rai<span class="hl">Cardiac Electrophysiologist</span></h1>
+      <div class="hero-creds">
+        <span>MD · DM (Cardiology)</span>
+        <span>Fellowship · Cardiac EP</span>
+        <span>KMC Reg. No. 73205</span>
+      </div>
+      <p class="hero-sub">Specialist in cardiac arrhythmias, pacemaker &amp; heart failure device implantations, electrophysiological studies, and radiofrequency ablation — Mangalore.</p>
+      <div class="hero-actions">
+        <a href="https://stethescope.biz/appointment/dda78831-c5ce-467b-84b1-3f2196043b58/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank" class="btn-primary"><i class="fas fa-calendar-check"></i>Book Appointment</a>
+        <a href="#specialities" class="btn-outline-white">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="hero-photo-deco"></div>
+      <div class="hero-photo-frame">
+        <!-- PULSING HEART ANIMATION -->
+        <div class="heart-container">
+          <svg class="heart-svg" viewBox="0 0 32 32">
+             <path d="M16 28.5L14.1 26.7C7.3 20.6 2 15.8 2 10.2C2 5.8 5.4 2.5 9.8 2.5C12.3 2.5 14.7 3.7 16 5.6C17.3 3.7 19.7 2.5 22.2 2.5C26.6 2.5 30 5.8 30 10.2C30 15.8 24.7 20.6 17.9 26.7L16 28.5Z" />
+          </svg>
+          <svg class="heart-ecg-overlay" viewBox="0 0 300 100">
+             <path d="M0,50 L40,50 L50,50 L56,32 L62,68 L68,18 L74,78 L80,50 L120,50 L128,50 L134,38 L140,62 L146,50 L300,50" />
+          </svg>
+        </div>
+      </div>
+      <div class="hero-tag">
+        <div class="ht">Mangaluru, Karnataka</div>
+        <div class="hs">Cardiac Electrophysiologist</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACT STRIP -->
+<div class="fact-strip">
+  <div class="fact-item"><div class="fact-icon"><i class="fas fa-user-md"></i></div><div><strong>MD · DM (Cardiology)</strong><span>Qualified Specialist</span></div></div>
+  <div class="fact-item"><div class="fact-icon"><i class="fas fa-heartbeat"></i></div><div><strong>Fellowship — Cardiac EP</strong><span>Electrophysiology</span></div></div>
+  <div class="fact-item"><div class="fact-icon"><i class="fas fa-id-card"></i></div><div><strong>KMC Reg. No. 73205</strong><span>Karnataka Medical Council</span></div></div>
+  <div class="fact-item"><div class="fact-icon"><i class="fas fa-map-marker-alt"></i></div><div><strong>3 Clinic Locations</strong><span>Mangaluru, Karnataka</span></div></div>
+</div>
+
+<!-- DOCTOR -->
+<section class="doctor reveal" id="doctors">
+  <div class="doctor-inner">
+    <div class="doc-photo reveal">
+      <img src="maneeshrai1.jpg" alt="Dr. Maneesh Rai — Cardiac Electrophysiologist, Mangalore">
+    </div>
+    <div class="doctor-info">
+      <span class="sec-label">The Specialist</span>
+      <h2>Dr. Maneesh Rai</h2>
+      <div class="doc-quals">MD · DM (Cardiology) · Fellowship in Cardiac Electrophysiology</div>
+      <p>Cardiac Electrophysiologist with expertise in the field of cardiac arrhythmias. Areas of specialisation include pacemaker and heart failure device (CRT / defibrillator) implantations, electrophysiological studies, and radiofrequency ablation.</p>
+      <p>Committed to personalised, evidence-based cardiac care — taking the time to explain every diagnosis and treatment option clearly to patients and their families.</p>
+      <div class="doc-quote">"A healthy heart is the foundation of a long and active life."</div>
+      <div class="doc-actions">
+        <a href="https://stethescope.biz/appointment/dda78831-c5ce-467b-84b1-3f2196043b58/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank" class="btn-dark"><i class="fas fa-calendar-check"></i>Book Appointment</a>
+        <a href="https://stethescope.biz/profile/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank" class="btn-outline-dark"><i class="fas fa-user-md"></i>View Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about reveal" id="about">
+  <div class="about-inner">
+    <div class="about-img reveal">
+      <div class="about-gold-bar"></div>
+      <img src="stockphotomain.webp" alt="Expert Cardiac Care — Dr. Maneesh Rai">
+      <div class="about-tag">
+        <div class="at">Mangaluru</div>
+        <div class="as">Karnataka · India</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="sec-label">About Dr. Maneesh Rai</span>
+      <h2 class="sec-h">Expert Cardiac Care</h2>
+      <p>Dr. Maneesh Rai is a Cardiac Electrophysiologist with expertise in the field of cardiac arrhythmias. His areas of specialisation include pacemaker and heart failure device (CRT / defibrillator) implantations, electrophysiological studies, and radiofrequency ablation.</p>
+      <p>He holds an MD and DM in Cardiology, along with a Fellowship in Cardiac Electrophysiology, and practises across three clinic locations in Mangalore — bringing advanced cardiac care to the region.</p>
+      <div class="about-feats">
+        <div class="about-feat"><i class="fas fa-hospital"></i><div><h5>3 Clinic Locations</h5><p>KMC · Maithri Clinics · RVR Centre</p></div></div>
+        <div class="about-feat"><i class="fas fa-bolt"></i><div><h5>EP Specialist</h5><p>Advanced arrhythmia management</p></div></div>
+        <div class="about-feat"><i class="fas fa-microchip"></i><div><h5>Device Therapy</h5><p>Pacemakers, CRT, Defibrillators</p></div></div>
+        <div class="about-feat"><i class="fas fa-clock"></i><div><h5>Mon – Fri Clinics</h5><p>10 AM–12:30 PM · 2:30–4:30 PM · 4:30–6:30 PM</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALITIES -->
+<section class="specialities reveal" id="specialities">
+  <div class="sec-inner">
+    <span class="sec-label">Our Expertise</span>
+    <h2 class="sec-h">Specialised Services</h2>
+    <p class="sec-sub">Comprehensive cardiac care using evidence-based protocols and modern technology.</p>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="svc-num">01</span><h4>ECG &amp; Echo</h4><p>Non-invasive cardiac diagnostics including resting ECG, 2D echocardiography, stress echo, and Holter monitoring — providing a detailed picture of your heart's structure, function, and electrical activity.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">02</span><h4>Angiography</h4><p>Gold-standard X-ray imaging of the coronary arteries performed in a catheterisation lab to precisely locate and assess blockages — the essential first step before planning angioplasty or bypass surgery.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">03</span><h4>Angioplasty</h4><p>Minimally invasive catheter-based procedure to open blocked coronary arteries, often with stent placement. Also used as primary PCI — the fastest treatment for acute heart attacks to protect the heart muscle.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">04</span><h4>Hypertension</h4><p>Comprehensive evaluation and long-term management of high blood pressure including 24-hour ambulatory BP monitoring, lifestyle counselling, and personalised medication plans to protect heart, brain and kidneys.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">05</span><h4>Heart Failure</h4><p>Specialised care for heart failure and cardiomyopathy — focusing on symptom control, medication optimisation, and device therapy such as CRT and defibrillators to maintain quality of life and avoid hospitalisation.</p></div>
+      <div class="svc-card reveal"><span class="svc-num">06</span><h4>Arrhythmia</h4><p>Diagnosis and treatment of irregular heart rhythms including atrial fibrillation, bradycardia, and tachycardia — using Holter monitoring, EP studies, pacemaker implantation, and catheter ablation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACEMAKERS -->
+<section class="pacemakers reveal" id="pacemakers">
+  <div class="sec-inner">
+    <span class="sec-label">Cardiac Devices</span>
+    <h2 class="sec-h">Pacemaker Options Explained</h2>
+    <p class="sec-sub">Understanding the differences helps you make the right decision for your heart health.</p>
+    <div class="pace-grid">
+      <div class="pace-card reveal"><span class="pace-num">01</span><h4>Conventional Pacemaker</h4><p>Requires a surgical implant and is the most affordable option. It carries a slightly higher infection risk and a small (&lt;10%) chance of worsening heart failure compared to newer alternatives — but remains effective and widely used.</p></div>
+      <div class="pace-card reveal"><span class="pace-num">02</span><h4>Left Bundle Pacing</h4><p>The most physiological form of pacing — closely mimics the heart's natural electrical pathway, resulting in very low risk of worsening heart failure. Requires a surgical implant and carries a similar infection risk to conventional pacing.</p></div>
+      <div class="pace-card reveal"><span class="pace-num">03</span><h4>Leadless Pacemaker</h4><p>No surgery required — inserted via a catheter approach. Allows early mobilisation with minimal post-operative pain and a very low risk of infection. Ideal for elderly patients. The only drawback compared to other options is the higher cost.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOGS -->
+<section class="blogs reveal" id="blogs">
+  <div class="sec-inner">
+    <span class="sec-label">From the Doctor</span>
+    <h2 class="sec-h">Patient Education Blogs</h2>
+    <p class="sec-sub">In-depth articles written by Dr. Maneesh Rai to help you understand your heart condition.</p>
+    <div class="blog-cards">
+      <a href="blog1.html" target="_blank" class="blog-card">
+        <div class="blog-card-img">
+          <img src="blog1.jpg" alt="CRT Blog">
+          <div class="blog-pill" style="background:var(--burg)">Heart Failure</div>
+        </div>
+        <div class="blog-card-body">
+          <h3>Can a Pacemaker Help Heart Failure Patients?</h3>
+          <p>Understanding Cardiac Resynchronization Therapy (CRT) — what it is, who benefits, and what the implant procedure involves.</p>
+          <span class="read-more">Read Article <i class="fas fa-arrow-right" style="font-size:10px"></i></span>
+        </div>
+      </a>
+      <a href="blog2.html" target="_blank" class="blog-card">
+        <div class="blog-card-img">
+          <img src="blog2.webp" alt="Pacemaker Blog">
+          <div class="blog-pill" style="background:var(--dark)">Pacemaker</div>
+        </div>
+        <div class="blog-card-body">
+          <h3>All You Need To Know About Permanent Pacemakers</h3>
+          <p>What is a pacemaker, who needs one, the implantation procedure, risks involved, and how to live normally after surgery.</p>
+          <span class="read-more">Read Article <i class="fas fa-arrow-right" style="font-size:10px"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials reveal" id="testimonials">
+  <div class="sec-inner">
+    <span class="sec-label">Patient Experiences</span>
+    <h2 class="sec-h">What Patients Say</h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Taking a bow. This doc saved my dad's life with his expertise and skills. Extremely passionate about his profession. Gem of a person who genuinely cares about the patients and their families too during the testing times. Also not to forget we were taken by surprise when we received a WhatsApp message from him checking on dad's health condition post treatment. God bless him."</blockquote>
+        <div class="testi-name">Akshatha S</div>
+        <div class="testi-label">Local Guide · Google Review</div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I would like to express my heartfelt gratitude to Dr Maneesh Rai for his expertise. His thorough approach, clear communication and compassionate demeanor always puts me at ease. Dr Maneesh never rushes to prescribe medicine, if he feels a person can improve with lifestyle changes. I feel fortunate to have been under his care and highly recommend him to anyone seeking a compassionate and knowledgeable healthcare provider."</blockquote>
+        <div class="testi-name">Cornel Prabhu</div>
+        <div class="testi-label">Google Review</div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"Dr. Maneesh put a double chamber pacemaker in my 87 year old Mom, 3 months ago. She is very healthy and walking around. He is a very good electrophysiologist. Very caring and compassionate person. I highly recommend him."</blockquote>
+        <div class="testi-name">Sudhir Kumar</div>
+        <div class="testi-label">Local Guide · Google Review</div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <blockquote>"I am extremely grateful to Dr. Maneesh Rai for the exceptional care he has provided during my mother's surgery. From the very beginning, he has demonstrated a keen ability to diagnose her condition accurately and promptly, which ultimately made a world of difference in her treatment in time as it was time sensitive and critical. His expertise, along with his compassionate approach, gave us the confidence we needed throughout the entire process. Dr. Rai took the time to explain every step, ensuring we understood what to expect, and his continued support and guidance after the surgery have been invaluable. We are truly thankful for the dedication and skill he has brought to my mother's care, and we are very happy with the results. I highly recommend Dr. Maneesh Rai to anyone in need of cardio related medical care. Thank you Dr. Maneesh."</blockquote>
+        <div class="testi-name">Nithin Narendran</div>
+        <div class="testi-label">Local Guide · Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="sec-label">Connect With Us</span>
+      <h2>Visit Our Clinics</h2>
+      <p>Three locations across Mangaluru. Reach out via phone, email, or WhatsApp and we will respond promptly.</p>
+
+      <div class="c-block">
+        <div class="c-label">Clinic 1 — Maithri Super Speciality Clinics</div>
+        <p>Blasius D'Souza Road, Next to Hotel Maya International<br>Bendoorwell, Mangaluru, Karnataka 575001</p>
+      </div>
+      <div class="c-block">
+        <div class="c-label">Clinic 2 — KMC Hospital</div>
+        <p>Dr. B. R. Ambedkar Circle, Attavar, Mangaluru, Karnataka 575001</p>
+      </div>
+      <div class="c-block">
+        <div class="c-label">Clinic 3 — RVR Super Speciality Centre</div>
+        <p>Tenet Diagnostics Building, Falnir, Mangaluru, Karnataka</p>
+      </div>
+
+      <div class="c-block">
+        <div class="c-label">Appointment Hours (Mon – Fri)</div>
+        <table class="hours-tbl">
+          <tr><td>10:00 AM – 12:30 PM</td><td>KMC Hospital, Ambedkar Circle</td></tr>
+          <tr><td>2:30 PM – 4:30 PM</td><td>Maithri Clinics, Bendoorwell</td></tr>
+          <tr><td>4:30 PM – 6:30 PM</td><td>RVR Super Speciality Centre, Falnir</td></tr>
+        </table>
+      </div>
+
+      <div class="c-links">
+        <a href="tel:919036895947"><i class="fas fa-phone"></i>+91 90368 95947 (Dr. Maneesh Rai)</a>
+        <a href="tel:919535711650"><i class="fas fa-phone"></i>+91 95357 11650 (Mrs. Kavitha)</a>
+        <a href="tel:08242436242"><i class="fas fa-phone"></i>0824-2436242</a>
+        <a href="tel:08242005000"><i class="fas fa-phone"></i>0824-2005000 (RVR Centre)</a>
+        <a href="mailto:drmkrai@gmail.com"><i class="fas fa-envelope"></i>drmkrai@gmail.com</a>
+        <a href="https://wa.me/919535711650" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp Mrs. Kavitha</a>
+      </div>
+    </div>
+
+    <div class="booking-card">
+      <div class="bk-pane active" id="pane-online">
+        <h3>Book Your Appointment</h3>
+        <p class="bk-desc">Schedule a consultation directly through our secure online booking portal — instant confirmation.</p>
+        <div class="bk-divider"></div>
+        <div class="bc-steps">
+          <div class="bc-step"><div class="bc-step-n">1</div><div class="bc-step-t"><strong>Click the button below</strong><span>Opens the secure booking portal</span></div></div>
+          <div class="bc-step"><div class="bc-step-n">2</div><div class="bc-step-t"><strong>Select date &amp; time</strong><span>View available appointment slots</span></div></div>
+          <div class="bc-step"><div class="bc-step-n">3</div><div class="bc-step-t"><strong>Confirm your details</strong><span>Receive instant booking confirmation</span></div></div>
+        </div>
+        <a href="https://stethescope.biz/appointment/dda78831-c5ce-467b-84b1-3f2196043b58/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank" class="btn-book"><i class="fas fa-calendar-check"></i>Book Appointment Online</a>
+        <p class="bc-alt"><a href="tel:919535711650">Call us for inquiries</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPS -->
+<div class="maps-row">
+  <div class="map-wrap">
+    <div class="map-lbl">Maithri Super Speciality · Bendoorwell</div>
+    <iframe src="https://maps.google.com/maps?q=Maithri+Super+Speciality+Clinic+Blasius+D'Souza+Road+Bendoorwell+Mangaluru+575001&t=&z=18&ie=UTF8&iwloc=B&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="map-wrap">
+    <div class="map-lbl">RVR Super Speciality Centre · Falnir</div>
+    <iframe src="https://maps.google.com/maps?q=RVR+Super+Speciality+Centre+Tenet+Diagnostics+Falnir+Mangaluru&t=&z=17&ie=UTF8&iwloc=B&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="f-brand">Dr. Maneesh Rai<em>Cardiac Electrophysiologist · Mangalore</em></div>
+      <p style="font-size:13px;max-width:320px;line-height:1.72">Specialist in pacemaker implantation, CRT, EP studies, and arrhythmia management. KMC Reg. No. 73205.</p>
+    </div>
+    <div class="footer-col">
+      <h6>Quick Links</h6>
+      <a href="#doctors">Specialist</a>
+      <a href="#about">About</a>
+      <a href="#specialities">Services</a>
+      <a href="#pacemakers">Pacemakers</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h6>Contact</h6>
+      <a href="tel:919036895947">+91 90368 95947</a>
+      <a href="tel:919535711650">+91 95357 11650 (Kavitha)</a>
+      <a href="mailto:drmkrai@gmail.com">drmkrai@gmail.com</a>
+      <a href="https://wa.me/919535711650" target="_blank">WhatsApp</a>
+      <a href="https://stethescope.biz/appointment/dda78831-c5ce-467b-84b1-3f2196043b58/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank">Book Online</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Dr. Maneesh Rai. All rights reserved.</div>
+    <div>Bendoorwell · KMC Ambedkar Circle · RVR Falnir, Mangaluru</div>
+  </div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mobile-bar">
+  <a href="tel:919036895947" class="m-call"><i class="fas fa-phone"></i> Call Now</a>
+  <a href="https://stethescope.biz/appointment/dda78831-c5ce-467b-84b1-3f2196043b58/hSNnIZafxhbM3IwvKBqaJN0UkuL2" target="_blank" class="m-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+</div>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+  }, 900);
+});
+// Fallback: hide after 3.5s no matter what
+setTimeout(() => {
+  document.getElementById('preloader').classList.add('hidden');
+}, 3500);
+
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+// Mobile menu
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('navLinks').classList.remove('open');
+}));
+
+// Reveal on scroll
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
