@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All You Need To Know About Permanent Pacemakers | Dr. Maneesh Rai</title>
+<meta name="description" content="A complete guide to permanent pacemakers — by Dr. Maneesh Rai, Cardiac Electrophysiologist, Mangalore.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --primary: #1E293B;
+    --accent:  #E53935;
+    --bg-soft: #F8FAFC;
+    --text-dark: #0F172A;
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
+    --white: #FFFFFF;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav { background: var(--primary); padding: 16px 6%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-icon { height: 38px; width: 38px; border-radius: 50%; background: var(--accent); color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: white; line-height: 1.1; }
+  .nav-logo-text em { display: block; font-style: normal; font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+  .nav-back { color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+  .nav-back:hover { color: var(--accent); }
+
+  /* HERO BANNER */
+  .blog-hero { background: linear-gradient(135deg, #0B1120 0%, #1E293B 100%); padding: 60px 6% 50px; }
+  .blog-tag { display: inline-block; background: var(--primary); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 14px; border-radius: 3px; margin-bottom: 20px; }
+  .blog-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 5vw, 52px); color: white; line-height: 1.15; margin-bottom: 14px; }
+  .blog-hero .subtitle { font-size: 15px; color: rgba(255,255,255,0.6); font-weight: 300; margin-bottom: 24px; }
+  .blog-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .blog-meta span { font-size: 12px; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 6px; }
+  .blog-meta span i { color: var(--accent); }
+
+  /* LAYOUT */
+  .blog-body { max-width: 1100px; margin: 0 auto; padding: 60px 6%; }
+
+  /* SECTION */
+  .blog-section { display: grid; grid-template-columns: 420px 1fr; gap: 50px; align-items: start; margin-bottom: 70px; padding-bottom: 70px; border-bottom: 1px solid var(--border-color); }
+  .blog-section:last-child { border-bottom: none; margin-bottom: 0; }
+  .blog-section.flip { grid-template-columns: 1fr 420px; }
+  .blog-section.flip .section-slider { order: 2; }
+  .blog-section.flip .section-text { order: 1; }
+
+  /* SLIDER */
+  .section-slider { position: relative; border-radius: 6px; overflow: hidden; background: #000; aspect-ratio: 4/3; }
+  .slider-track { display: flex; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1); height: 100%; }
+  .slider-track img { min-width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+  .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.55); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 5; }
+  .slider-btn:hover { background: var(--accent); }
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+  .slider-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+  .slider-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.45); cursor: pointer; transition: background 0.2s; }
+  .slider-dots span.active { background: white; }
+  .single-img { border-radius: 6px; overflow: hidden; aspect-ratio: 4/3; }
+  .single-img img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* TEXT */
+  .section-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); color: var(--accent); margin-bottom: 16px; line-height: 1.25; }
+  .section-text p { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.8; }
+  .section-text p:last-child { margin-bottom: 0; }
+  .section-text ol, .section-text ul { padding-left: 20px; margin-bottom: 14px; }
+  .section-text li { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin-bottom: 8px; }
+
+  /* INFO BOX */
+  .info-box { background: var(--bg-soft); border-left: 4px solid var(--accent); padding: 28px; border-radius: 4px; font-size: 14px; color: var(--text-muted); line-height: 1.8; }
+  .info-box h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--primary); margin-bottom: 14px; }
+
+  /* CTA */
+  .blog-cta { background: var(--primary); color: white; padding: 50px 6%; text-align: center; margin-top: 60px; border-radius: 6px; }
+  .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; margin-bottom: 12px; }
+  .blog-cta p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 24px; }
+  .wa-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 14px 30px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: opacity 0.2s; }
+  .wa-btn:hover { opacity: 0.88; }
+
+  /* FOOTER */
+  .blog-footer { text-align: center; padding: 30px 6%; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border-color); margin-top: 40px; }
+  .blog-footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 800px) {
+    .blog-section, .blog-section.flip { grid-template-columns: 1fr; gap: 28px; }
+    .blog-section.flip .section-slider, .blog-section.flip .section-text { order: unset; }
+    .blog-body { padding: 40px 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon"><i class="fas fa-heartbeat"></i></div>
+    <span class="nav-logo-text">Dr. Maneesh Rai<em>Best Cardiologist in Mangalore</em></span>
+  </a>
+  <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Website</a>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <span class="blog-tag">Pacemaker</span>
+  <h1>All You Need To Know About Permanent Pacemakers</h1>
+  <p class="subtitle">A Patient's Guide — by Dr. Maneesh Rai, Cardiac Electrophysiologist</p>
+  <div class="blog-meta">
+    <span><i class="fas fa-user-md"></i> Dr. Maneesh Rai, MD, DM (Cardiology)</span>
+    <span><i class="fas fa-map-marker-alt"></i> Mangalore, Karnataka</span>
+    <span><i class="fas fa-clock"></i> 5 min read</span>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="blog-body">
+
+  <!-- Section 1: What Is A Pacemaker -->
+  <div class="blog-section">
+    <div class="section-slider" id="slider1">
+      <div class="slider-track" id="track1">
+        <img src="blog2.webp" alt="Pacemaker Device">
+        <img src="blog2 1.jpg" alt="Pacemaker Implant Illustration">
+      </div>
+      <button class="slider-btn prev" onclick="slide('track1','dots1',-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-btn next" onclick="slide('track1','dots1', 1)"><i class="fas fa-chevron-right"></i></button>
+      <div class="slider-dots" id="dots1">
+        <span class="active" onclick="goTo('track1','dots1',0)"></span>
+        <span onclick="goTo('track1','dots1',1)"></span>
+      </div>
+    </div>
+    <div class="section-text">
+      <h2>What Is A Pacemaker?</h2>
+      <p>A pacemaker is an artificial battery that is implanted under the skin below the collar bone. It provides electrical impulses to the heart and is used for patients with abnormally slow heart rates.</p>
+      <p>The device continuously monitors the heart's own electrical activity. When the heart beats too slowly or pauses, the pacemaker automatically delivers a small electrical signal to prompt a heartbeat — keeping the heart rate within a safe, comfortable range.</p>
+    </div>
+  </div>
+
+  <!-- Section 2: Symptoms -->
+  <div class="blog-section flip">
+    <div class="section-text">
+      <h2>What Are The Symptoms Of A Slow Heart Rate?</h2>
+      <p>Patients with a slow heart rate (bradycardia) can present with a range of symptoms, from mild to severe:</p>
+      <ul>
+        <li>Blackouts or recurrent loss of consciousness</li>
+        <li>Difficulty walking or extreme fatigue</li>
+        <li>Breathlessness on exertion</li>
+        <li>Leg swelling</li>
+        <li>Decrease in urine output</li>
+        <li>Persistent dizziness or light-headedness</li>
+      </ul>
+      <p>If you or a family member experiences any of these symptoms, it is important to seek a cardiac evaluation promptly.</p>
+    </div>
+    <div class="info-box" style="align-self:center;">
+      <h4>When Is a Pacemaker Needed?</h4>
+      <p>A pacemaker is generally recommended when:</p>
+      <ul style="padding-left:18px; margin-top:10px;">
+        <li>Heart rate is persistently below 40 beats per minute</li>
+        <li>Heart pauses are recorded on a Holter monitor</li>
+        <li>Symptoms of blackouts or dizziness are confirmed to be due to slow heart rate</li>
+        <li>The electrical conduction system of the heart is diseased (heart block)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 3: Procedure and Risks -->
+  <div class="blog-section">
+    <div style="background:var(--primary); border-radius:6px; padding:36px; color:white; align-self:start;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px; color:rgba(255,255,255,0.9);">Procedure at a Glance</p>
+      <ul style="padding-left:18px; color:rgba(255,255,255,0.75); font-size:13px; line-height:2.1;">
+        <li>Done under mild sedation</li>
+        <li>Duration: ~45 minutes to 1 hour</li>
+        <li>Small incision below the collar bone</li>
+        <li>1–2 wires inserted into the heart via a vein</li>
+        <li>Device placed in a pocket under the skin</li>
+        <li>Life-threatening complications in &lt;1%</li>
+        <li>Hospital stay: ~3–4 days</li>
+      </ul>
+    </div>
+    <div class="section-text">
+      <h2>Pacemaker Implantation — Procedure &amp; Risks</h2>
+      <p>The procedure is done under mild sedation and takes about 45 minutes to an hour. An incision is made beneath the collar bone on the right or left side, and one or two wires are inserted into the heart via a small vein. A small pocket is created under the skin near the collar bone in which the pacemaker device is placed.</p>
+      <p>The procedure is generally very safe with a low rate of complications. Life-threatening complications occur in less than 1% of patients. Some manageable complications that can occur include:</p>
+      <ol>
+        <li>Pneumothorax (small air leak into the lung)</li>
+        <li>Displacement of the leads (pacemaker may need repositioning)</li>
+        <li>Bleeding and haemothorax</li>
+        <li>Pacemaker infection</li>
+      </ol>
+      <p>Thankfully, these complications are seen in only 1–2 in every 100 implantations and can be managed. After the procedure, patients are kept under observation for 6–8 hours and then shifted to the ward. Hospitalisation is around 3–4 days, mainly for wound monitoring and continuing antibiotics.</p>
+    </div>
+  </div>
+
+  <!-- Section 4: Living With A Pacemaker -->
+  <div class="blog-section flip">
+    <div class="section-text">
+      <h2>Living With A Pacemaker</h2>
+      <p>Most people live a completely normal life after pacemaker surgery. The device is small, sits under the skin, and is not visible to others.</p>
+      <p><strong>EMI (Electromagnetic Interference)</strong> refers to the interaction between electromagnetic fields and the pacemaker. Most common household electrical equipment — mobile phones, microwave ovens, televisions — can be safely used.</p>
+      <p>Patients should avoid placing mobile phones directly over the pacemaker site and should inform all doctors and dentists about having a pacemaker before any procedures.</p>
+      <p>For detailed information on EMI and pacemaker safety, visit: <a href="https://www.cardiovascular.abbott/us/en/patients/cardiovascular-device-patient-services/emi.html" target="_blank" style="color:var(--accent);">Abbott EMI Guide →</a></p>
+    </div>
+    <div class="info-box" style="align-self:center;">
+      <h4>After Your Pacemaker — Key Points</h4>
+      <ul style="padding-left:18px; margin-top:10px; font-size:13px; line-height:2;">
+        <li>Avoid lifting heavy objects for 4–6 weeks</li>
+        <li>Keep wound clean and dry</li>
+        <li>Carry your pacemaker ID card at all times</li>
+        <li>Inform airport security staff</li>
+        <li>Regular pacemaker clinic follow-up every 6–12 months</li>
+        <li>Battery typically lasts 8–12 years</li>
+        <li>MRI-compatible pacemakers are now available</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="blog-cta">
+    <h3>Need a Pacemaker Consultation in Mangalore?</h3>
+    <p>Dr. Maneesh Rai specialises in pacemaker implantations and cardiac device therapy. Reach out directly via WhatsApp.</p>
+    <a href="https://wa.me/919535711650?text=Hi%2C%20I%20read%20the%20blog%20on%20pacemakers%20and%20would%20like%20to%20consult%20Dr.%20Maneesh%20Rai." target="_blank" class="wa-btn">
+      <i class="fab fa-whatsapp" style="font-size:18px;"></i> Book a Consultation via WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<div class="blog-footer">
+  <p>© 2026 <a href="index.html">Dr. Maneesh Rai</a> — Cardiac Electrophysiologist, Mangalore · KMC Reg. No. 73205</p>
+</div>
+
+<script>
+  const positions = {};
+  function slide(trackId, dotsId, dir) {
+    const track = document.getElementById(trackId);
+    const imgs = track.querySelectorAll('img');
+    const total = imgs.length;
+    if (!positions[trackId]) positions[trackId] = 0;
+    positions[trackId] = (positions[trackId] + dir + total) % total;
+    track.style.transform = `translateX(-${positions[trackId] * 100}%)`;
+    updateDots(dotsId, positions[trackId]);
+  }
+  function goTo(trackId, dotsId, index) {
+    const track = document.getElementById(trackId);
+    positions[trackId] = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    updateDots(dotsId, index);
+  }
+  function updateDots(dotsId, active) {
+    document.querySelectorAll(`#${dotsId} span`).forEach((d, i) => {
+      d.classList.toggle('active', i === active);
+    });
+  }
+</script>
+</body>
+</html>

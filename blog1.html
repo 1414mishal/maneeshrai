@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can a Pacemaker Help Heart Failure Patients? | Dr. Maneesh Rai</title>
+<meta name="description" content="Understanding Cardiac Resynchronization Therapy (CRT) — by Dr. Maneesh Rai, Cardiac Electrophysiologist, Mangalore.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --dark:    #111018;
+    --burg:    #7B1A1A;
+    --burg2:   #9F2B2B;
+    --gold:    #B8892A;
+    --gold2:   #D4A843;
+    --ivory:   #FDFCF9;
+    --cream:   #F6F0E6;
+    --text:    #16110A;
+    --muted:   #7A6B54;
+    --border:  #DDD4C2;
+    --white:   #FFFFFF;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--ivory); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav { background: var(--dark); padding: 16px 6%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.25); }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo-icon { height: 38px; width: 38px; border-radius: 50%; background: var(--burg); color: white; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .nav-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: white; line-height: 1.1; }
+  .nav-logo-text em { display: block; font-style: normal; font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .nav-back { color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 600; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+  .nav-back:hover { color: var(--gold2); }
+
+  /* HERO BANNER */
+  .blog-hero { background: linear-gradient(135deg, #0C0B12 0%, #1C1A2A 100%); padding: 60px 6% 50px; border-bottom: 3px solid var(--burg); }
+  .blog-tag { display: inline-block; background: var(--burg); color: white; font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 20px; }
+  .blog-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 5vw, 52px); color: white; line-height: 1.15; margin-bottom: 14px; font-weight: 400; }
+  .blog-hero .subtitle { font-size: 15px; color: rgba(255,255,255,0.52); font-weight: 300; margin-bottom: 24px; }
+  .blog-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .blog-meta span { font-size: 12px; color: rgba(255,255,255,0.45); display: flex; align-items: center; gap: 6px; }
+  .blog-meta span i { color: var(--gold); }
+
+  /* LAYOUT */
+  .blog-body { max-width: 1100px; margin: 0 auto; padding: 60px 6%; }
+
+  /* SECTION */
+  .blog-section { display: grid; grid-template-columns: 420px 1fr; gap: 50px; align-items: start; margin-bottom: 70px; padding-bottom: 70px; border-bottom: 1px solid var(--border); }
+  .blog-section:last-child { border-bottom: none; margin-bottom: 0; }
+  .blog-section.flip { grid-template-columns: 1fr 420px; }
+  .blog-section.flip .section-slider { order: 2; }
+  .blog-section.flip .section-text { order: 1; }
+
+  /* SLIDER */
+  .section-slider { position: relative; border-radius: 4px; overflow: hidden; background: #000; aspect-ratio: 4/3; }
+  .slider-track { display: flex; transition: transform 0.45s cubic-bezier(0.4,0,0.2,1); height: 100%; }
+  .slider-track img { min-width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+  .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.55); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; z-index: 5; }
+  .slider-btn:hover { background: var(--burg); }
+  .slider-btn.prev { left: 10px; }
+  .slider-btn.next { right: 10px; }
+  .slider-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+  .slider-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.45); cursor: pointer; transition: background 0.2s; }
+  .slider-dots span.active { background: white; }
+  .single-img { border-radius: 4px; overflow: hidden; aspect-ratio: 4/3; }
+  .single-img img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* TEXT */
+  .section-text h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); color: var(--burg); margin-bottom: 16px; line-height: 1.25; font-weight: 400; }
+  .section-text p { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.82; }
+  .section-text p:last-child { margin-bottom: 0; }
+  .section-text ol, .section-text ul { padding-left: 20px; margin-bottom: 14px; }
+  .section-text li { font-size: 14px; color: var(--muted); line-height: 1.82; margin-bottom: 8px; }
+
+  /* CTA */
+  .blog-cta { background: var(--dark); color: white; padding: 50px 6%; text-align: center; margin-top: 60px; border-radius: 4px; border-top: 3px solid var(--burg); }
+  .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; margin-bottom: 12px; font-weight: 400; }
+  .blog-cta p { color: rgba(255,255,255,0.55); font-size: 14px; margin-bottom: 24px; }
+  .wa-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 14px 30px; border-radius: 3px; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: opacity 0.2s; }
+  .wa-btn:hover { opacity: 0.88; }
+
+  /* FOOTER */
+  .blog-footer { text-align: center; padding: 30px 6%; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
+  .blog-footer a { color: var(--burg); text-decoration: none; }
+  .blog-footer a:hover { color: var(--gold); }
+
+  @media (max-width: 800px) {
+    .blog-section, .blog-section.flip { grid-template-columns: 1fr; gap: 28px; }
+    .blog-section.flip .section-slider, .blog-section.flip .section-text { order: unset; }
+    .blog-body { padding: 40px 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon"><i class="fas fa-heartbeat"></i></div>
+    <span class="nav-logo-text">Dr. Maneesh Rai<em>Cardiac Electrophysiologist · Mangalore</em></span>
+  </a>
+  <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Website</a>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <span class="blog-tag">Heart Failure</span>
+  <h1>Can a Pacemaker Help Heart Failure Patients?</h1>
+  <p class="subtitle">Cardiac Resynchronization Therapy — A Guide by Dr. Maneesh Rai</p>
+  <div class="blog-meta">
+    <span><i class="fas fa-user-md"></i> Dr. Maneesh Rai, MD, DM (Cardiology)</span>
+    <span><i class="fas fa-map-marker-alt"></i> Mangalore, Karnataka</span>
+    <span><i class="fas fa-clock"></i> 5 min read</span>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="blog-body">
+
+  <!-- Section 1: What Is Heart Failure -->
+  <div class="blog-section">
+    <div class="section-slider" id="slider1">
+      <div class="slider-track" id="track1">
+        <img src="sliderblog1.jpg" alt="Normal Heart vs Heart Failure">
+        <img src="sliderblog1(2).jpg" alt="Heart Failure Diagram">
+      </div>
+      <button class="slider-btn prev" onclick="slide('track1','dots1',-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-btn next" onclick="slide('track1','dots1', 1)"><i class="fas fa-chevron-right"></i></button>
+      <div class="slider-dots" id="dots1">
+        <span class="active" onclick="goTo('track1','dots1',0)"></span>
+        <span onclick="goTo('track1','dots1',1)"></span>
+      </div>
+    </div>
+    <div class="section-text">
+      <h2>What Is Heart Failure?</h2>
+      <p>Heart failure refers to the reduced pumping capacity of the heart. The normal heart pumps around 60% of the blood it receives during each contraction. This is measured by an echocardiogram and is referred to as the ejection fraction (EF).</p>
+      <p>This normal EF of 60% is reduced in heart failure and is sometimes as low as 30%. When the pumping capacity of the heart reduces, symptoms appear. This could manifest as breathlessness while walking, swelling in the legs, fatigue, or reduced urine output.</p>
+    </div>
+  </div>
+
+  <!-- Section 2: What Causes Heart Failure -->
+  <div class="blog-section flip">
+    <div class="section-text">
+      <h2>What Causes Heart Failure?</h2>
+      <p>Some of the common causes of heart failure are:</p>
+      <ol>
+        <li><strong>Reduced blood supply (Ischemic Cardiomyopathy):</strong> When a portion of the heart is deprived of blood supply — acutely (as in a heart attack) or slowly due to progressing blockages — the heart muscle weakens and its pumping capacity reduces. Most often, if blood supply is restored by angioplasty or bypass surgery, the heart may regain some pumping capacity.</li>
+        <li><strong>Non-ischemic Cardiomyopathy:</strong> Some inherent problem in the heart muscle structure makes it weak despite normal blood supply. Causes may be genetic or metabolic. One important cause is an electrical delay caused by a left bundle branch block (LBBB) on the ECG — correcting this with CRT can result in very good recovery of pumping capacity.</li>
+      </ol>
+    </div>
+    <div class="single-img">
+      <img src="blog1.jpg" alt="Causes of Heart Failure">
+    </div>
+  </div>
+
+  <!-- Section 3: What Is CRT -->
+  <div class="blog-section">
+    <div class="single-img">
+      <img src="blog1 (2).jpg" alt="CRT Device">
+    </div>
+    <div class="section-text">
+      <h2>What Is CRT?</h2>
+      <p>CRT (Cardiac Resynchronization Therapy) is a device similar to a pacemaker, implanted in patients with heart failure and electrical delay on the ECG — typically LBBB (Left Bundle Branch Block).</p>
+      <p>It works by improving the electrical synchrony in the pumping chambers of the heart. In properly selected patients, CRT improves the pumping capacity of the heart, thereby relieving many symptoms related to heart failure.</p>
+      <p>Patients will still need to continue their medications after CRT; however, they can expect a better quality of life due to improved cardiac function. Rarely, the pumping capacity almost normalises and the doctor may then consider reducing the medicines required.</p>
+    </div>
+  </div>
+
+  <!-- Section 4: Who Benefits -->
+  <div class="blog-section flip">
+    <div class="section-text">
+      <h2>Will All Patients With Heart Failure Benefit From CRT?</h2>
+      <p>No. Only patients with heart failure, reduced ejection fraction, <strong>and</strong> left bundle branch block (LBBB) on the ECG tend to benefit from CRT. Patients with narrow QRS on the ECG or post heart attack patients generally do not benefit.</p>
+      <p>It is important to understand that in the patient population in whom CRT is likely to be beneficial, it is better to consider the procedure <em>early</em> in the course of heart failure — even if symptoms are not very troublesome. In these patients of LBBB and heart failure, CRT when used early can sometimes (not always) reverse the heart failure entirely. In later stages, although still helpful, CRT might not have the same degree of benefit.</p>
+    </div>
+    <div style="background:var(--cream); border-left:3px solid var(--gold); padding:30px; border-radius:4px; font-size:14px; color:var(--muted); line-height:1.82;">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--dark); margin-bottom:14px; font-weight:400;">Key Criteria for CRT:</p>
+      <ul style="padding-left:18px;">
+        <li>Heart failure with reduced ejection fraction (&lt;35%)</li>
+        <li>Left Bundle Branch Block (LBBB) on ECG</li>
+        <li>QRS duration &gt;130 ms</li>
+        <li>Symptoms despite optimal medical therapy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Section 5: Procedure -->
+  <div class="blog-section">
+    <div style="background:var(--dark); border-radius:4px; padding:36px; color:white; border-top:3px solid var(--burg);">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:22px; margin-bottom:18px; color:rgba(255,255,255,0.9); font-weight:400;">Procedure Highlights</p>
+      <ul style="padding-left:18px; color:rgba(255,255,255,0.62); font-size:13px; line-height:2.1;">
+        <li>Similar to standard pacemaker implantation</li>
+        <li>Three leads inserted instead of two</li>
+        <li>One lead enters the left heart via the coronary sinus</li>
+        <li>Favourable anatomy = straightforward procedure</li>
+        <li>Success rate &gt;90% of cases</li>
+        <li>Complication rate remains low, similar to pacemaker</li>
+      </ul>
+    </div>
+    <div class="section-text">
+      <h2>CRT Implant Procedure</h2>
+      <p>Implanting the CRT is similar to pacemaker insertion and the two procedures share many common risks and considerations. CRT, however, is a longer and more challenging procedure as three leads have to be inserted inside the heart instead of two as in a routine pacemaker.</p>
+      <p>One of the leads enters the left side of the heart via a small vein called the <strong>coronary sinus</strong>. The anatomy of the coronary sinus and its branches is often the rate-limiting step in a CRT implant. A favourable anatomy will result in a very easy procedure, while an unfavourable anatomy will result in a longer, more complex one.</p>
+      <p>Generally, in &gt;90% of cases, a successful CRT implant can be achieved. Like pacemaker implantation, the complication rate remains low.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="blog-cta">
+    <h3>Have Questions About CRT or Heart Failure?</h3>
+    <p>Dr. Maneesh Rai is a Cardiac Electrophysiologist specialising in pacemaker and CRT device implantations in Mangalore.</p>
+    <a href="https://wa.me/919535711650?text=Hi%2C%20I%20read%20the%20blog%20on%20CRT%20and%20would%20like%20to%20consult%20Dr.%20Maneesh%20Rai." target="_blank" class="wa-btn">
+      <i class="fab fa-whatsapp" style="font-size:18px;"></i> Book a Consultation via WhatsApp
+    </a>
+  </div>
+
+</div>
+
+<div class="blog-footer">
+  <p>© 2026 <a href="index.html">Dr. Maneesh Rai</a> — Cardiac Electrophysiologist, Mangalore · KMC Reg. No. 73205</p>
+</div>
+
+<script>
+  const positions = {};
+  function slide(trackId, dotsId, dir) {
+    const track = document.getElementById(trackId);
+    const imgs = track.querySelectorAll('img');
+    const total = imgs.length;
+    if (!positions[trackId]) positions[trackId] = 0;
+    positions[trackId] = (positions[trackId] + dir + total) % total;
+    track.style.transform = `translateX(-${positions[trackId] * 100}%)`;
+    updateDots(dotsId, positions[trackId]);
+  }
+  function goTo(trackId, dotsId, index) {
+    const track = document.getElementById(trackId);
+    positions[trackId] = index;
+    track.style.transform = `translateX(-${index * 100}%)`;
+    updateDots(dotsId, index);
+  }
+  function updateDots(dotsId, active) {
+    document.querySelectorAll(`#${dotsId} span`).forEach((d, i) => {
+      d.classList.toggle('active', i === active);
+    });
+  }
+</script>
+</body>
+</html>
